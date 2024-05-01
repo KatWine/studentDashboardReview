@@ -1,9 +1,10 @@
 import React from 'react'
 import './cohortlistitem.scss';
 
-const CohortListItem = () => {
+const CohortListItem = ({item}) => {
+  
   return (
-    <li className='cohort-list__item'>All Students</li>
+    <li className='cohort-list__item'>{item}</li>
   )
 }
 
