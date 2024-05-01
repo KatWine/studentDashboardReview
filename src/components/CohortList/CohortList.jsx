@@ -5,7 +5,7 @@ import './cohortlist.scss';
 
 const CohortList = () => {
   return (
-    <aside class="cohort-list">
+    <aside className="cohort-list">
         <h3 className='cohort-list__header'> Choose a Class by Start Date</h3>
         <ul> 
             <CohortListItem/>

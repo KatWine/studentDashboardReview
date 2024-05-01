@@ -1,7 +1,23 @@
+@import '../../styles/app.scss';
+
 .student-list {
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: white;
-    border: black solid 2px;
-    padding: 20px;
+    padding: 35px;
+
+    h3 {
+       font-size: 25px; 
+    }
+
+    p{
+        font-size: 20px;
+    }
+    span {
+        color: $primary;
+    }
+
+    &__item {
+        margin-top: 5%;
+    }
 }
