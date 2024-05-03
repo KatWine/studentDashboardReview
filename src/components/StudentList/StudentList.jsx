@@ -1,14 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './studentlist.scss';
 import StudentListItem from './StudentListItem/StudentListItem';
 
-const StudentList = () => {
+const StudentList = ({ cohort, currentCohort }) => {
   return (
     <main className="student-list">
-        <h3> Winter 2026</h3>
-        <p> Total Students: <span>250</span></p>
+        <h3>{cohort}</h3>
+        <p> Total Students: <span>{currentCohort.length}</span></p>
         <ul className="student-list__item">
-          <li> <StudentListItem/> </li>
+          {currentCohort.map((student) => (<li key={student.id}><StudentListItem student={student} /></li>))}
         </ul>
         
     </main>

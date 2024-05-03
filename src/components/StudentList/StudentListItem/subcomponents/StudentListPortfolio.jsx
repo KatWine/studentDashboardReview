@@ -1,15 +1,18 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './studentportfolio.scss';
 
-const StudentListPortfolio = () => {
+const StudentListPortfolio = ({ student }) => {
+  const percentOfGoal = Math.floor((student.codewars.current.total / student.codewars.goal.total) * 100)
+
   return (
     <section className="student-list__portfolio">
     <div className="student-list__codewars">
         <h3> Codewars</h3>
-        <p> <span>Current Total:</span> 1804</p>
-        <p> <span>Last Week:</span> 144</p>
-        <p> <span>Goal:</span> 850</p>
-        <p> <span>Percentage Of Goal Achieved:</span> 212%</p>
+        <p> <span>Current Total:</span> {student.codewars.current.total}</p>
+        <p> <span>Last Week:</span> {student.codewars.current.lastWeek}</p>
+        <p> <span>Goal:</span> {student.codewars.goal.total}</p>
+        <p> <span>Percentage Of Goal Achieved:</span> {percentOfGoal > 100 ? 100 : percentOfGoal}%</p>
     </div>
     <div className="student-list__scores">
         <h3> Scores</h3>
